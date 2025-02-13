@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Counter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button id="theme-toggle">🌙 Dark Mode</button>
+
+    <div class="container">
+        <h1> Analyze your text ski in realtime. </h1>
+        
+        <textarea id="text-input" placeholder="Type or paste your text here..."></textarea>
+        <button id="voice-btn">🎤 Start Speaking</button>
+
+        
+        <div class="options">
+            <label>
+                <input type="checkbox" id="exclude-spaces">
+                Exclude Spaces
+            </label>
+            <label>
+                Character Limit: 
+                <input type="number" id="char-limit" min="1">
+            </label>
+        </div>
+
+        <div id="output">
+            <canvas id="letterChart"></canvas>
+            <p>Total Characters: <span id="char-count">0</span></p>
+            <p>Word Count: <span id="word-count">0</span></p>
+            <p>Sentence Count: <span id="sentence-count">0</span></p>
+            <p>Reading Time: <span id="reading-time">0</span> mins</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
